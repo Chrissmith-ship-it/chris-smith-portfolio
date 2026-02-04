@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Chris Smith | Finance Director | London hybrid</title>
+<style>
+:root{
+  --bg0:#070B14;
+  --bg1:#0B1226;
+  --text:#EAF0FF;
+  --muted:#B8C4E6;
+  --muted2:#8FA3D6;
+  --royal:#1D4ED8;
+  --cyan:#38BDF8;
+  --green:#34D399;
+  --gold:#F4D35E;
+  --border:rgba(255,255,255,.10);
+  --shadow:0 18px 54px rgba(0,0,0,.45);
+  --radius:16px;
+}
+*{box-sizing:border-box;}
+html,body{height:100%;}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Arial,sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(1100px 650px at 14% 8%, rgba(29,78,216,.44), transparent 58%),
+    radial-gradient(900px 620px at 82% 14%, rgba(56,189,248,.18), transparent 60%),
+    linear-gradient(180deg,var(--bg0),var(--bg1));
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:1180px;margin:0 auto;padding:18px 18px 72px;}
+.header{
+  border:1px solid var(--border);
+  background:linear-gradient(180deg, rgba(15,27,54,.90), rgba(11,23,48,.78));
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:16px;
+  position:relative;
+  overflow:hidden;
+}
+.header:before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background:
+    radial-gradient(720px 340px at 14% 22%, rgba(29,78,216,.36), transparent 62%),
+    radial-gradient(560px 260px at 86% 28%, rgba(56,189,248,.14), transparent 62%);
+  pointer-events:none;
+}
+.header>*{position:relative;}
+.topline{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+.nameblock{display:flex;align-items:center;gap:12px;}
+.avatar{width:32px;height:32px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);display:grid;place-items:center;box-shadow:0 10px 18px rgba(0,0,0,.22);}
+.name{font-weight:950;letter-spacing:-.35px;font-size:22px;line-height:1.05;margin:0;}
+.tagline{margin-top:4px;font-size:13px;color:var(--muted);font-weight:900;letter-spacing:.12px;}
+.meta{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;}
+.chip{font-size:12px;color:var(--muted);padding:7px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);display:inline-flex;align-items:center;gap:8px;white-space:nowrap;}
+.chip b{color:var(--text);font-weight:950;}
+.tabs{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:center;}
+.tab{border:1px solid rgba(255,255,255,.12);background:rgba(15,27,54,.48);color:var(--muted);padding:10px 12px;border-radius:999px;font-size:13px;font-weight:950;letter-spacing:.1px;display:inline-flex;align-items:center;gap:10px;cursor:pointer;transition:transform .15s ease,border-color .15s ease,background .15s ease,color .15s ease;user-select:none;}
+.tab:hover{transform:translateY(-1px);border-color:rgba(56,189,248,.35);background:rgba(15,27,54,.70);color:var(--text);}
+.tab.active{border-color:rgba(56,189,248,.45);color:var(--text);background:linear-gradient(135deg, rgba(29,78,216,.68), rgba(56,189,248,.16));}
+
+.content{margin-top:12px;border:1px solid var(--border);background:rgba(15,27,54,.40);border-radius:var(--radius);box-shadow:0 10px 28px rgba(0,0,0,.25);overflow:hidden;}
+.content-inner{padding:16px;}
+.section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:10px;}
+.section-title h2{margin:0;font-size:18px;letter-spacing:-.25px;}
+.section-title span{color:var(--muted2);font-size:12px;font-weight:900;}
+.tab-pane{display:none;}
+.tab-pane.active{display:block;}
+
+.hero{display:grid;grid-template-columns:1.12fr .88fr;gap:12px;align-items:stretch;margin-bottom:12px;}
+@media (max-width:980px){.hero{grid-template-columns:1fr;}}
+.panel{border:1px solid rgba(255,255,255,.10);background:rgba(7,11,20,.20);border-radius:14px;padding:10px;}
+.panel.tight{padding:10px;}
+.h1{margin:0 0 6px;font-size:15.5px;letter-spacing:-.25px;line-height:1.18;font-weight:950;}
+.p{margin:0;color:var(--muted);font-size:13.1px;line-height:1.62;max-width:110ch;}
+.contactbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;}
+
+.kpi-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+@media (max-width:520px){.kpi-grid{grid-template-columns:1fr;}}
+.kpi{border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.03);border-radius:14px;padding:12px;min-height:104px;}
+.kpi-title{font-size:11.5px;color:var(--muted);font-weight:950;letter-spacing:.25px;text-transform:uppercase;display:flex;gap:8px;align-items:center;}
+.kpi-title svg{width:14px;height:14px;opacity:.92;}
+.kpi-value{font-size:20px;font-weight:950;letter-spacing:-.35px;white-space:nowrap;margin-top:4px;}
+.kpi-note{margin-top:6px;color:var(--muted2);font-size:12px;line-height:1.45;}
+
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:12px;}
+.card{grid-column:span 6;border:1px solid rgba(255,255,255,.10);background:rgba(7,11,20,.20);border-radius:14px;padding:14px;transition:transform .18s ease,border-color .18s ease,background .18s ease;cursor:pointer;overflow:hidden;}
+.card.full{grid-column:span 12;}
+.card.third{grid-column:span 3;}
+@media (max-width:980px){.card,.card.full,.card.third{grid-column:span 12;}}
+.card:hover{transform:translateY(-3px);border-color:rgba(56,189,248,.35);background:rgba(7,11,20,.28);}
+.card h3{margin:0;font-size:14px;letter-spacing:-.12px;display:flex;gap:10px;align-items:center;}
+.card h3 svg{width:18px;height:18px;opacity:.95;}
+.card p{margin:8px 0 0;color:var(--muted);font-size:13px;line-height:1.6;}
+.more{margin-top:10px;padding-top:10px;border-top:1px dashed rgba(255,255,255,.12);color:var(--muted2);font-size:12px;line-height:1.55;max-height:0;overflow:hidden;opacity:0;transition:max-height .25s ease,opacity .25s ease;}
+.card:hover .more{max-height:720px;opacity:1;}
+.card.expanded .more{max-height:720px;opacity:1;}
+
+ul{margin:8px 0 0 18px;color:var(--muted);font-size:13px;line-height:1.6;}
+li{margin:6px 0;}
+
+.timeline{position:relative;padding-left:18px;margin-top:6px;}
+.timeline:before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:2px;background:rgba(56,189,248,.22);border-radius:2px;}
+.t-item{position:relative;padding:12px 12px 12px 16px;margin:0 0 12px 0;border:1px solid rgba(255,255,255,.10);background:rgba(7,11,20,.18);border-radius:14px;}
+.t-item:before{content:"";position:absolute;left:-16px;top:18px;width:12px;height:12px;border-radius:999px;background:rgba(56,189,248,.95);box-shadow:0 0 0 6px rgba(56,189,248,.14);}
+.t-top{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+.t-role{font-weight:950;letter-spacing:-.15px;}
+.t-sub{font-weight:850;color:var(--muted);}
+.t-dates{color:var(--muted2);font-size:12px;font-weight:900;}
+.t-meta{color:var(--muted);font-size:13px;margin-top:6px;line-height:1.55;}
+.t-scope{color:var(--muted);font-size:13px;margin-top:6px;line-height:1.55;}
+.muted{color:var(--muted2);}
+.dot{opacity:.55;margin:0 6px;}
+
+.callout{
+  margin-top:10px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(7,11,20,.28);
+  border-radius:14px;
+  padding:12px;
+}
+.callout .h{font-weight:950;margin:0 0 6px;letter-spacing:-.15px;}
+.callout .t{margin:0;color:var(--muted);font-size:13px;line-height:1.6;}
+
+pre{margin:10px 0 0;padding:12px;border-radius:14px;border:1px solid rgba(255,255,255,.10);background:rgba(7,11,20,.40);overflow:auto;font-size:12px;line-height:1.55;}
+.kw{color:var(--cyan);}
+.fn{color:var(--gold);}
+.cm{color:rgba(184,196,230,.75);}
+.st{color:rgba(52,211,153,.95);}
+.nu{color:rgba(244,211,94,.95);}
+
+footer{margin-top:14px;color:var(--muted2);font-size:12px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);font-weight:950;color:var(--text);}
+.btn:hover{border-color:rgba(56,189,248,.35);background:rgba(255,255,255,.06);}
+.btn svg{width:18px;height:18px;opacity:.95;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <div class="topline">
+      <div>
+        <div class="nameblock">
+          <div class="avatar" aria-label="Profile avatar">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" width="20" height="20">
+              <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4z" fill="currentColor" opacity=".22"></path>
+              <path d="M4 21a8 8 0 0 1 16 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".55"></path>
+            </svg>
+          </div>
+          <div>
+            <div class="name">Chris Smith</div>
+            <div class="tagline">Finance Director | Transformation and FP&A | Technology and Commercial Finance | London hybrid</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="meta">
+        <span class="chip"><b>Phone:</b> 07777 103 152</span>
+        <a class="chip" href="mailto:chris_p_smith@outlook.com"><b>Email:</b> chris_p_smith@outlook.com</a>
+        <a class="chip" href="https://www.linkedin.com/in/chrispaulsmith" target="_blank" rel="noreferrer"><b>LinkedIn:</b> chrispaulsmith</a>
+      </div>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Portfolio tabs">
+      <button class="tab active" type="button" data-tab="summary" role="tab" aria-selected="true">Summary</button>
+      <button class="tab" type="button" data-tab="experience" role="tab" aria-selected="false">Experience</button>
+      <button class="tab" type="button" data-tab="results" role="tab" aria-selected="false">Results</button>
+      <button class="tab" type="button" data-tab="skills" role="tab" aria-selected="false">Skills</button>
+      <button class="tab" type="button" data-tab="ai" role="tab" aria-selected="false">AI and automation</button>
+      <button class="tab" type="button" data-tab="contact" role="tab" aria-selected="false">Get in touch</button>
+    </div>
+  </div>
+
+  <div class="content" aria-live="polite">
+    <div class="content-inner">
+
+      <div class="tab-pane active" id="summary" role="tabpanel">
+        <div class="section-title">
+          <h2>Summary</h2>
+          <span>Business partner, transformation, value creation, technology, property, commercial finance</span>
+        </div>
+
+        <div class="hero">
+          <div class="panel tight">
+            <div class="h1">About me</div>
+            <p class="p">
+              Finance Director with 15+ years in FTSE 100 and PE backed environments. Senior business partner to CFOs, CIOs, CTOs, CREO and ExCo, owning resource allocation, performance discipline and investment decisions across $1bn+ P&amp;Ls and multi-billion Capex portfolios. Led value creation across Technology and Real Estate cost bases, delivering $300m+ cost reduction through ZBB, operating model redesign and restructuring, underpinned by embedded governance and value realisation. Modernised reporting and planning through automation and AI, and lead hands on teams in complex matrix organisations, driving accountability, pace and decision quality.
+            </p>
+
+            <div class="contactbar" aria-label="Contact me">
+              <span class="chip"><b>Phone:</b> 07777 103 152</span>
+              <a class="chip" href="mailto:chris_p_smith@outlook.com"><b>Email:</b> chris_p_smith@outlook.com</a>
+              <a class="chip" href="https://www.linkedin.com/in/chrispaulsmith" target="_blank" rel="noreferrer"><b>LinkedIn:</b> chrispaulsmith</a>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="kpi-grid">
+              <div class="kpi">
+                <div class="kpi-title">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M4 19h16" stroke="currentColor" stroke-width="2" opacity=".7"></path>
+                    <path d="M7 16l3-4 3 2 4-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                  Cost reduction
+                </div>
+                <div class="kpi-value">$300m+</div>
+                <div class="kpi-note">ZBB, Globl Transformation Programmes operating model redesign and restructuring.</div>
+              </div>
+
+              <div class="kpi">
+                <div class="kpi-title">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M12 3v18" stroke="currentColor" stroke-width="2" opacity=".6"></path>
+                    <path d="M6 7h12M6 17h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                  </svg>
+                  Budget managed
+                </div>
+                <div class="kpi-value">$1bn+</div>
+                <div class="kpi-note">FP&A, Governance and performance discipline across large corporate cost bases.</div>
+              </div>
+
+              <div class="kpi">
+                <div class="kpi-title">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M3 12h18" stroke="currentColor" stroke-width="2"></path>
+                    <path d="M7 7h10v10H7z" stroke="currentColor" stroke-width="2" opacity=".65"></path>
+                  </svg>
+                  Capex & Change
+                </div>
+                <div class="kpi-value">$400m+</div>
+                <div class="kpi-note">Multi-billion long term Technology investment cases, $400m+ Technology Change Budgets, $250m Property Capex  .</div>
+              </div>
+
+              <div class="kpi">
+                <div class="kpi-title">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M7 7h10v10H7z" stroke="currentColor" stroke-width="2"></path>
+                    <path d="M9 9h6M9 12h6M9 15h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".7"></path>
+                  </svg>
+                  REVENUE MANAGEMENT
+                </div>
+                <div class="kpi-value">$100m+</div>
+                <div class="kpi-note">European leadership on margin, utilisation and delivery decisions.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="card third" data-expand>
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M7 8h10M7 12h10M7 16h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+              Business partnering
+            </h3>
+            <p>Executive decision support across performance, resourcing and investment.</p>
+            <div class="more">CFO, CIO, CTO, CREO and ExCo partnership, clear definitions, clear owners and a cadence that turns insight into action.</div>
+          </div>
+
+          <div class="card third" data-expand>
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 7h16v10H4z" stroke="currentColor" stroke-width="2"></path>
+                <path d="M8 21h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".7"></path>
+              </svg>
+              Technology
+            </h3>
+            <p>Spend transparency, portfolio governance, vendor economics, delivery routines.</p>
+            <div class="more">Created governance for Technology spend of $1.3bn and built ZBB capability with tracked benefits.</div>
+          </div>
+
+          <div class="card third" data-expand>
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M3 21h18" stroke="currentColor" stroke-width="2" opacity=".6"></path>
+                <path d="M6 21V9l6-5 6 5v12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+              </svg>
+              Property
+            </h3>
+            <p>Estate cost modelling, commitments, leakage control, capability build.</p>
+            <div class="more">Created governance for Property and Estates spend of $800m and built a new Property Finance capability.</div>
+          </div>
+
+          <div class="card third" data-expand>
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3v18" stroke="currentColor" stroke-width="2" opacity=".6"></path>
+                <path d="M7 8c1.5-2.5 8.5-2.5 10 0s-8.5 2.5-10 0z" stroke="currentColor" stroke-width="2"></path>
+                <path d="M7 16c1.5 2.5 8.5 2.5 10 0" stroke="currentColor" stroke-width="2"></path>
+              </svg>
+              Commercial finance
+            </h3>
+            <p>GTM support, pricing, unit economics, product profitability, investment cases.</p>
+            <div class="more">Built GTM support for AI products and created product profitability models at BT to improve segment transparency and decision quality.</div>
+          </div>
+
+          <div class="card full" data-expand>
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M7 7h10v10H7z" stroke="currentColor" stroke-width="2"></path>
+                <path d="M9 9h6M9 12h6M9 15h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".7"></path>
+              </svg>
+              Python and AI
+            </h3>
+            <p>Practical automation and AI assisted workflows that improve pace, consistency and control.</p>
+            <div class="more">Automation of repeatable finance workflows, plus AI agents to summarise, structure and draft decision materials from finance inputs.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane" id="experience" role="tabpanel">
+        <div class="section-title">
+          <h2>Experience</h2>
+          <span>Full timeline</span>
+        </div>
+
+        <div class="timeline">
+          <div class="t-item">
+            <div class="t-top">
+              <div class="t-role">APCO Worldwide <span class="t-sub">, Finance Director, Europe</span></div>
+              <div class="t-dates">Sep 2025 to Present</div>
+            </div>
+            <div class="t-meta"><b>London, UK</b> <span class="dot">•</span> <span class="muted">Largest independently owned PR agency</span></div>
+            <div class="t-scope">Lead planning and performance for seven European markets, $100m+ revenue, driving growth and margin decisions, reporting to Group Co-CFO.</div>
+            <ul>
+              <li>Lead performance cadence across Europe, aligning revenue, margin and utilisation decisions with business leaders.</li>
+              <li>Reviewed underperforming and overserviced accounts across rate realisation, delivery mix and utilisation, identifying overserving across nearly 100 clients.</li>
+              <li>Build clearer resourcing and utilisation routines across markets to improve pace, accountability and decision quality.</li>
+            </ul>
+          </div>
+
+          <div class="t-item">
+            <div class="t-top">
+              <div class="t-role">WPP <span class="t-sub">, Finance Director, Strategy and Transformation, Group PLC</span></div>
+              <div class="t-dates">Aug 2024 to Aug 2025</div>
+            </div>
+            <div class="t-meta"><b>London, UK</b> <span class="dot">•</span> <span class="muted">Global advertising and marketing services group</span></div>
+            <div class="t-scope">Shaped Board and ExCo decision making on performance, investment governance and transformation through clear financial narrative and papers.</div>
+            <ul>
+              <li>Owned monthly performance reporting and governance for a $1bn+ corporate cost base, including budget, forecast, long range plan, cashflow and controls, presenting in ExCo forums.</li>
+              <li>Created governance for Technology spend of $1.3bn, improving visibility, decision rights and prioritisation across portfolio and vendors.</li>
+              <li>Created governance for Property and Estates spend of $800m, consolidating costs and long term commitments and reducing cost leakage.</li>
+              <li>Built pricing and commercial models and GTM support for AI and SaaS offerings linking CAC, margin, retention and payback, supporting CEO approval for investment.</li>
+              <li>Reduced month end reporting cycle time from 8 to 5 days through standardisation and automation.</li>
+            </ul>
+          </div>
+
+          <div class="t-item">
+            <div class="t-top">
+              <div class="t-role">WPP <span class="t-sub">, Head of Finance and Operations, Value Creation</span></div>
+              <div class="t-dates">Mar 2023 to Aug 2024</div>
+            </div>
+            <div class="t-meta"><b>London, UK</b> <span class="dot">•</span> <span class="muted">Global advertising and marketing services group</span></div>
+            <div class="t-scope">Built value creation and value realisation routines, delivering spend governance, prioritisation and measurable benefits across technology and corporate functions.</div>
+            <ul>
+              <li>Built ZBB capability and benefits tracking, delivering $110m in year technology savings with sustained run rate governance.</li>
+              <li>Redesigned technology chart of accounts and allocation approach to create consistent visibility of spend and enable stronger governance and cost control.</li>
+              <li>Redesigned intercompany recharge methodology, reducing mismatches and aged balances and strengthening balance sheet integrity while centralising investment decisions under the CIO.</li>
+            </ul>
+          </div>
+
+          <div class="t-item">
+            <div class="t-top">
+              <div class="t-role">WPP <span class="t-sub">, Head of Finance, Technology Business Partnering</span></div>
+              <div class="t-dates">May 2022 to Mar 2023</div>
+            </div>
+            <div class="t-meta"><b>London, UK</b> <span class="dot">•</span> <span class="muted">Global advertising and marketing services group</span></div>
+            <div class="t-scope">Partnered CIO and CTO leadership across investment, cost control and performance.</div>
+            <ul>
+              <li>Owned finance partnering for $500m direct IT spend and governance over $700m wider technology spend, improving reporting and visibility across vendor costs and portfolio priorities.</li>
+              <li>Reset finance partnering cadence and outputs to focus on forward looking decision support.</li>
+            </ul>
+          </div>
+
+          <div class="t-item">
+            <div class="t-top">
+              <div class="t-role">BT Group <span class="t-sub">, Senior Finance Business Partner, M&amp;A, Data and AI</span></div>
+              <div class="t-dates">Apr 2021 to May 2022</div>
+            </div>
+            <div class="t-meta"><b>London, UK</b> <span class="dot">•</span> <span class="muted">UK telecommunications provider</span></div>
+            <div class="t-scope">Led finance partners supporting MD Data and AI and MD M&amp;A, leading finance workstreams for buy side investment decisions.</div>
+            <ul>
+              <li>Led valuation modelling, diligence support and approval materials for buy side investment decisions.</li>
+              <li>Built market sizing, scenario and unit economics models for new product launches, supporting pricing and investment decisions.</li>
+            </ul>
+          </div>
+
+          <div class="t-item">
+            <div class="t-top">
+              <div class="t-role">BT Group <span class="t-sub">, Senior Finance Manager, Insights and Economics</span></div>
+              <div class="t-dates">Jan 2019 to Apr 2021</div>
+            </div>
+            <div class="t-meta"><b>London, UK</b> <span class="dot">•</span> <span class="muted">UK telecommunications provider</span></div>
+            <div class="t-scope">Created product profitability and overhead allocation methodology covering about £1.6bn of P&amp;L, adopted into management reporting.</div>
+            <ul>
+              <li>Created a product profitability model adopted in FY2021 management reporting, improving decision support and segment transparency.</li>
+              <li>Built driver based economics and portfolio insight to support prioritisation decisions and performance improvement.</li>
+            </ul>
+          </div>
+
+          <div class="t-item">
+            <div class="t-top">
+              <div class="t-role">BT Group <span class="t-sub">, Finance Manager, Transformation</span></div>
+              <div class="t-dates">Apr 2018 to Jan 2019</div>
+            </div>
+            <div class="t-meta"><b>London, UK</b> <span class="dot">•</span> <span class="muted">UK telecommunications provider</span></div>
+            <div class="t-scope">Developed commercial models for new IT microservices and created models to optimise outsourced resource spend.</div>
+            <ul>
+              <li>Developed commercial models and partner spend optimisation models, delivering $50m cost savings over 3 years.</li>
+            </ul>
+          </div>
+
+          <div class="t-item">
+            <div class="t-top">
+              <div class="t-role">Inmarsat, now Viasat <span class="t-sub">, Progressive finance roles</span></div>
+              <div class="t-dates">Aug 2011 to Apr 2018</div>
+            </div>
+            <div class="t-meta"><b>London, UK</b> <span class="dot">•</span> <span class="muted">Satellite communications, acquired by Viasat</span></div>
+            <div class="t-scope">Progressed through roles including Finance Accountant, Finance Controller and Finance Manager, supporting investment and commercial decision making.</div>
+            <ul>
+              <li>Built commercial and capacity planning models for multi billion dollar satellite investments.</li>
+              <li>Supported strategic investment decisions through financial modelling and scenario planning.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane" id="results" role="tabpanel">
+        <div class="section-title">
+          <h2>Results</h2>
+          <span>Selected outcomes</span>
+        </div>
+
+        <div class="grid">
+          <div class="card" data-expand>
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 19h16" stroke="currentColor" stroke-width="2" opacity=".7"></path>
+                <path d="M7 15l3-3 3 2 4-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              $1bn+ P&amp;L management
+            </h3>
+            <p>Performance cadence, forecasting and owner accountability at scale.</p>
+            <div class="more">Governance that ties numbers to owners, actions and follow through.</div>
+          </div>
+
+          <div class="card" data-expand>
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+              $100m+ revenue management
+            </h3>
+            <p>Multi market leadership on margin, utilisation and delivery decisions.</p>
+            <div class="more">Improved commercial focus through clearer routines and visibility.</div>
+          </div>
+
+          <div class="card" data-expand>
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3v18" stroke="currentColor" stroke-width="2" opacity=".6"></path>
+                <path d="M6 9h12M6 15h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+              $300m+ cost reduction delivery
+            </h3>
+            <p>ZBB, operating model redesign and restructuring with value realisation routines.</p>
+            <div class="more">Embedded governance, tracking and accountability to sustain benefits.</div>
+          </div>
+
+          <div class="card" data-expand>
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 12h14" stroke="currentColor" stroke-width="2"></path>
+                <path d="M12 5v14" stroke="currentColor" stroke-width="2"></path>
+              </svg>
+              Built ZBB capability
+            </h3>
+            <p>Ownership and benefits tracking for a global organisation.</p>
+            <div class="more">Taxonomy, validation routines and governance to keep savings real.</div>
+          </div>
+
+          <div class="card" data-expand>
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 7h16v10H4z" stroke="currentColor" stroke-width="2"></path>
+                <path d="M9 21h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".7"></path>
+              </svg>
+              Created governance for Technology spend of $1.3bn
+            </h3>
+            <p>Visibility, decision rights, portfolio prioritisation and vendor economics.</p>
+            <div class="more">Sharper investment choices through consistent definitions and cadence.</div>
+          </div>
+
+          <div class="card" data-expand>
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M3 21h18" stroke="currentColor" stroke-width="2" opacity=".6"></path>
+                <path d="M6 21V9l6-5 6 5v12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+              </svg>
+              Created governance for Property and Estates spend of $800m
+            </h3>
+            <p>Consolidated costs, commitments and leakage control across the estate.</p>
+            <div class="more">Repeatable model and cadence for decision making.</div>
+          </div>
+
+          <div class="card full" data-expand>
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4-6.5 4 2-7L2 9h7z" stroke="currentColor" stroke-width="2"></path>
+              </svg>
+              Built GTM support for AI products
+            </h3>
+            <p>Pricing and commercial models linking CAC, margin, retention and payback.</p>
+            <div class="more">Decision support that translates product strategy into measurable economics.</div>
+          </div>
+
+          <div class="card full" data-expand>
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 19h16" stroke="currentColor" stroke-width="2" opacity=".7"></path>
+                <path d="M7 16V8M12 16V6M17 16V10" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+              Created product profitability model at BT
+            </h3>
+            <p>Allocation and profitability methodology covering about £1.6bn of P&amp;L, adopted into management reporting.</p>
+            <div class="more">Improved segment transparency and decision support on performance and investment.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane" id="skills" role="tabpanel">
+        <div class="section-title">
+          <h2>Skills</h2>
+          <span>Coverage and depth</span>
+        </div>
+
+        <div class="grid">
+          <div class="card" data-expand>
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M7 8h10M7 12h10M7 16h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+              Business partnering
+            </h3>
+            <p>Executive decision support, governance, stakeholder management.</p>
+            <div class="more">CFO, CIO, CTO, CREO and ExCo level partnership in complex matrix environments.</div>
+          </div>
+
+          <div class="card" data-expand>
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+              FP&amp;A leadership
+            </h3>
+            <p>Budget, forecast, long range plan, scenarios, packs and cadence.</p>
+            <div class="more">Driver based modelling and clear definitions to improve decision quality.</div>
+          </div>
+
+          <div class="card" data-expand>
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5 12h14" stroke="currentColor" stroke-width="2"></path>
+                <path d="M12 5v14" stroke="currentColor" stroke-width="2"></path>
+              </svg>
+              Value creation and ZBB
+            </h3>
+            <p>Benefits taxonomy, validation, sustainment and reporting.</p>
+            <div class="more">Governance that keeps savings measurable, owned and repeatable.</div>
+          </div>
+
+          <div class="card" data-expand>
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 7h16v10H4z" stroke="currentColor" stroke-width="2"></path>
+                <path d="M9 21h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".7"></path>
+              </svg>
+              Technology finance
+            </h3>
+            <p>Portfolio governance, vendor economics, spend taxonomy, decision rights.</p>
+            <div class="more">Spend visibility and prioritisation across large, complex portfolios.</div>
+          </div>
+
+          <div class="card" data-expand>
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M3 21h18" stroke="currentColor" stroke-width="2" opacity=".6"></path>
+                <path d="M6 21V9l6-5 6 5v12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+              </svg>
+              Property and estates finance
+            </h3>
+            <p>Estate cost modelling, commitments, governance, leakage control.</p>
+            <div class="more">Models and routines that make costs and commitments legible.</div>
+          </div>
+
+          <div class="card" data-expand>
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4-6.5 4 2-7L2 9h7z" stroke="currentColor" stroke-width="2"></path>
+              </svg>
+              Commercial finance
+            </h3>
+            <p>GTM, pricing, unit economics, investment cases, product profitability.</p>
+            <div class="more">Commercial models that connect decisions to margin and cash.</div>
+          </div>
+
+          <div class="card full" data-expand>
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M7 7h10v10H7z" stroke="currentColor" stroke-width="2"></path>
+                <path d="M9 9h6M9 12h6M9 15h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".7"></path>
+              </svg>
+              Python and AI
+            </h3>
+            <p>Automation of repeatable workflows, plus AI assisted drafting and summarisation.</p>
+            <div class="more">Used to reduce manual handling and improve consistency of packs and narrative.</div>
+          </div>
+
+          <div class="card" data-expand>
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M8 6h13v12H8z" stroke="currentColor" stroke-width="2"></path>
+                <path d="M3 10h5M3 14h5" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".7"></path>
+              </svg>
+              Operating model design
+            </h3>
+            <p>Org design, process redesign, roles, controls and transition.</p>
+            <div class="more">Complex change across finance, technology and corporate functions.</div>
+          </div>
+
+          <div class="card full" data-expand>
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="2"></path>
+                <path d="M7 9h10M7 12h10M7 15h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".7"></path>
+              </svg>
+              Systems
+            </h3>
+            <p>Adaptive, Maconomy, SAP S/4HANA, core ERP and planning tools, reporting and data structures.</p>
+            <div class="more">Governance and definitions that translate system output into usable insight.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane" id="ai" role="tabpanel">
+        <div class="section-title">
+          <h2>AI and automation</h2>
+          <span>Practical examples</span>
+        </div>
+
+        <div class="grid">
+          <div class="card" data-expand>
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M7 7h10v10H7z" stroke="currentColor" stroke-width="2"></path>
+                <path d="M9 9h6M9 12h6M9 15h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".7"></path>
+              </svg>
+              Python automation
+            </h3>
+            <p>Automated repeatable finance workflows to reduce manual handling and improve consistency.</p>
+            <div class="more">Pack build, validation checks, reconciliations and structured outputs to speed up cycles and reduce error risk.</div>
+          </div>
+
+          <div class="card" data-expand>
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3v18" stroke="currentColor" stroke-width="2" opacity=".6"></path>
+                <path d="M6 9h12M6 15h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+              AI agents for decision workflows
+            </h3>
+            <p>AI agents that summarise, structure and draft decision materials from finance inputs.</p>
+            <div class="more">Used to accelerate insight generation and improve the quality of narrative and action tracking.</div>
+          </div>
+
+          <div class="card full" data-expand>
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4-6.5 4 2-7L2 9h7z" stroke="currentColor" stroke-width="2"></path>
+              </svg>
+              GTM and product economics for AI products
+            </h3>
+            <p>Built pricing and commercial models for AI products linking CAC, margin, retention and payback to investment decisions.</p>
+            <div class="more">Used in executive approvals and to compare commercial options with a clear view of unit economics.</div>
+          </div>
+
+          <div class="card full" data-expand>
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+              Python use case in finance
+            </h3>
+            <p>This is a simple example of how Python can be used in Finace: </p>
+            <div class="more">What does it do: reads a file, run checks, summarise it, then write an output for a finance pack.</div>
+
+<pre><code><span class="cm"># Example: </span>
+<span class="kw">import</span> pandas <span class="kw">as</span> pd
+
+<span class="kw">def</span> <span class="fn">validate</span>(df):
+    <span class="kw">assert</span> df.isna().sum().sum() <span class="kw">==</span> <span class="nu">0</span>, <span class="st">"Missing values"</span>
+
+df = pd.read_csv(<span class="st">"export.csv"</span>)
+validate(df)
+
+summary = df.groupby([<span class="st">"region"</span>,<span class="st">"cost_center"</span>])[<span class="st">"amount"</span>].sum().reset_index()
+summary.to_excel(<span class="st">"Monthly_Pack.xlsx"</span>, index=<span class="kw">False</span>)</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane" id="contact" role="tabpanel">
+        <div class="section-title">
+          <h2>Get in touch</h2>
+          <span></span>
+        </div>
+
+        <div class="callout">
+          <p class="h">Open to senior Finance Director roles</p>
+          <p class="t">Happy to speak to recruiters and hiring managers about FP&amp;A leadership, transformation, technology finance, commercial finance and investment governance.</p>
+          <div class="btns">
+            <a class="btn" href="mailto:chris_p_smith@outlook.com">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M21 8v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8" stroke="currentColor" stroke-width="2"></path>
+                <path d="M21 8l-9 6-9-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              Email me
+            </a>
+
+            <a class="btn" href="tel:+447777103152">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1A19.4 19.4 0 0 1 4.2 12.8 19.8 19.8 0 0 1 1.1 4.2 2 2 0 0 1 3.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 2.9a2 2 0 0 1-.5 2.1L7 10a16 16 0 0 0 7 7l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.5 2.9.6a2 2 0 0 1 1.7 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              Call me
+            </a>
+
+            <a class="btn" href="https://www.linkedin.com/in/chrispaulsmith" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 3h16v18H4z" stroke="currentColor" stroke-width="2"></path>
+                <path d="M8 10v8M8 7v.5M12 10v8M12 13c0-1.7 1-3 3-3s3 1.3 3 3v5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <div class="grid" style="margin-top:12px;">
+          <div class="card full" data-expand>
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M21 8v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8" stroke="currentColor" stroke-width="2"></path>
+                <path d="M21 8l-9 6-9-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              Contact details
+            </h3>
+            <ul>
+              <li><b>Phone:</b> 07777 103 152</li>
+              <li><b>Email:</b> <a href="mailto:chris_p_smith@outlook.com">chris_p_smith@outlook.com</a></li>
+              <li><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/chrispaulsmith" target="_blank" rel="noreferrer">linkedin.com/in/chrispaulsmith</a></li>
+            </ul>
+            <div class="more">I Look forward to speaking to you!</div>
+          </div>
+        </div>
+
+        <footer><div>© 2026 Chris Smith.</div></footer>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const tabs = Array.from(document.querySelectorAll(".tab"));
+  const panes = Array.from(document.querySelectorAll(".tab-pane"));
+
+  function activate(id){
+    tabs.forEach(t=>{
+      const on = t.dataset.tab === id;
+      t.classList.toggle("active", on);
+      t.setAttribute("aria-selected", on ? "true" : "false");
+    });
+    panes.forEach(p=>p.classList.toggle("active", p.id === id));
+    try{ history.replaceState(null, "", "#" + id); }catch(e){}
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }
+
+  tabs.forEach(t=>t.addEventListener("click", ()=>activate(t.dataset.tab)));
+
+  const cards = Array.from(document.querySelectorAll("[data-expand]"));
+  cards.forEach(c=>{
+    c.addEventListener("click", (e)=>{
+      const a = e.target.closest("a");
+      if (a) return;
+      c.classList.toggle("expanded");
+    });
+  });
+
+  const start = (location.hash || "#summary").slice(1);
+  activate(panes.some(p=>p.id === start) ? start : "summary");
+})();
+</script>
+</body>
+</html>
