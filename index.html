@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="noindex, nofollow" />
-<title>Chris Smith | Finance Director | London hybrid</title>
+<title>Chris Smith | Finance Director | London</title>
 <style>
 :root{
   --bg0:#070B14;
@@ -35,10 +35,7 @@ body{
 a{color:inherit;text-decoration:none;}
 .wrap{max-width:1180px;margin:0 auto;padding:18px 18px 72px;}
 
-/* ============================================
-   Note: Header gradient took me ages to get right
-   Wanted it to feel premium but not overdone
-   ============================================ */
+/* Header */
 .header{
   border:1px solid var(--border);
   background:linear-gradient(180deg, rgba(15,27,54,.90), rgba(11,23,48,.78));
@@ -60,8 +57,6 @@ a{color:inherit;text-decoration:none;}
 .header>*{position:relative;}
 .topline{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;flex-wrap:wrap;}
 .nameblock{display:flex;align-items:center;gap:12px;}
-
-/* Note: Using emoji instead of complex SVG here - simpler and has personality */
 .avatar{
   width:38px;
   height:38px;
@@ -79,10 +74,7 @@ a{color:inherit;text-decoration:none;}
 .chip{font-size:12px;color:var(--muted);padding:7px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);display:inline-flex;align-items:center;gap:8px;white-space:nowrap;}
 .chip b{color:var(--text);font-weight:950;}
 
-/* ============================================
-   Note: Tabs are my favorite part - makes the page feel interactive
-   without needing JavaScript frameworks
-   ============================================ */
+/* Tabs */
 .tabs{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:center;}
 .tab{
   border:1px solid rgba(255,255,255,.12);
@@ -120,10 +112,7 @@ a{color:inherit;text-decoration:none;}
 .tab-pane{display:none;}
 .tab-pane.active{display:block;}
 
-/* ============================================
-   Note: Two-column hero layout works well on desktop
-   Stacks nicely on mobile
-   ============================================ */
+/* Hero block */
 .hero{display:grid;grid-template-columns:1.12fr .88fr;gap:12px;align-items:stretch;margin-bottom:12px;}
 @media (max-width:980px){.hero{grid-template-columns:1fr;}}
 .panel{border:1px solid rgba(255,255,255,.10);background:rgba(7,11,20,.20);border-radius:14px;padding:10px;}
@@ -132,7 +121,7 @@ a{color:inherit;text-decoration:none;}
 .p{margin:0;color:var(--muted);font-size:13.1px;line-height:1.62;max-width:110ch;}
 .contactbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;}
 
-/* KPI cards - these show the big numbers at a glance */
+/* KPI cards */
 .kpi-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
 @media (max-width:520px){.kpi-grid{grid-template-columns:1fr;}}
 .kpi{border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.03);border-radius:14px;padding:12px;min-height:104px;}
@@ -140,11 +129,7 @@ a{color:inherit;text-decoration:none;}
 .kpi-value{font-size:20px;font-weight:950;letter-spacing:-.35px;white-space:nowrap;margin-top:4px;}
 .kpi-note{margin-top:6px;color:var(--muted2);font-size:12px;line-height:1.45;}
 
-/* ============================================
-   Note: Grid system - I wanted flexibility
-   Some cards are half-width, some full, some third
-   Makes the layout feel less rigid
-   ============================================ */
+/* Card grid */
 .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:12px;}
 .card{
   grid-column:span 6;
@@ -160,14 +145,11 @@ a{color:inherit;text-decoration:none;}
 .card.third{grid-column:span 4;}
 @media (max-width:980px){.card,.card.full,.card.third{grid-column:span 12;}}
 
-/* Note: Hover effects - I like subtle lift + color change
-   Keeps it interactive without being too flashy */
 .card:hover{
   transform:translateY(-2px);
   border-color:rgba(56,189,248,.30);
   background:rgba(7,11,20,.32);
 }
-/* Some cards get a slightly different hover - adds variety */
 .card:nth-child(3n):hover{
   border-color:rgba(29,78,216,.35);
 }
@@ -178,7 +160,6 @@ a{color:inherit;text-decoration:none;}
 .card h3{margin:0;font-size:14px;letter-spacing:-.12px;display:flex;gap:8px;align-items:center;}
 .card p{margin:8px 0 0;color:var(--muted);font-size:13px;line-height:1.6;}
 
-/* The "more" section expands on hover - this was specifically requested */
 .more{
   margin-top:10px;
   padding-top:10px;
@@ -196,10 +177,7 @@ a{color:inherit;text-decoration:none;}
 ul{margin:8px 0 0 18px;color:var(--muted);font-size:13px;line-height:1.6;}
 li{margin:6px 0;}
 
-/* ============================================
-   Note: Timeline design for experience section
-   The dot + line visual helps show career progression
-   ============================================ */
+/* Timeline */
 .timeline{position:relative;padding-left:18px;margin-top:6px;}
 .timeline:before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:2px;background:rgba(56,189,248,.22);border-radius:2px;}
 .t-item{position:relative;padding:12px 12px 12px 16px;margin:0 0 12px 0;border:1px solid rgba(255,255,255,.10);background:rgba(7,11,20,.18);border-radius:14px;}
@@ -223,11 +201,6 @@ li{margin:6px 0;}
 .callout .h{font-weight:950;margin:0 0 6px;letter-spacing:-.15px;}
 .callout .t{margin:0;color:var(--muted);font-size:13px;line-height:1.6;}
 
-/* ============================================
-   Note: Code block styling
-   Wanted it to look like actual terminal output
-   Color-coded syntax makes it readable for non-coders too
-   ============================================ */
 pre{
   margin:10px 0 0;
   padding:14px;
@@ -268,17 +241,16 @@ footer{margin-top:14px;color:var(--muted2);font-size:12px;display:flex;justify-c
 </head>
 <body>
 <div class="wrap">
-  <!-- ================================
-       HEADER: Name, contact, navigation tabs
-       ================================ -->
+
+  <!-- Header -->
   <div class="header">
     <div class="topline">
       <div>
         <div class="nameblock">
-          <div class="avatar" aria-label="Profile avatar">💼</div>
+          <div class="avatar" aria-label="Profile avatar">CS</div>
           <div>
             <div class="name">Chris Smith</div>
-            <div class="tagline">Finance Director | $1bn+ P&Ls | ZBB & Transformation | Tech & Property</div>
+            <div class="tagline">Finance Director | Transformation &amp; Value Creation | Tech &amp; Corporate Finance</div>
           </div>
         </div>
       </div>
@@ -293,7 +265,7 @@ footer{margin-top:14px;color:var(--muted2);font-size:12px;display:flex;justify-c
     <div class="tabs" role="tablist" aria-label="Portfolio tabs">
       <button class="tab active" type="button" data-tab="summary" role="tab" aria-selected="true">Summary</button>
       <button class="tab" type="button" data-tab="experience" role="tab" aria-selected="false">Experience</button>
-      <button class="tab" type="button" data-tab="skills" role="tab" aria-selected="false">Skills & Tools</button>
+      <button class="tab" type="button" data-tab="skills" role="tab" aria-selected="false">Skills &amp; Tools</button>
       <button class="tab" type="button" data-tab="automation" role="tab" aria-selected="false">Automation</button>
       <button class="tab" type="button" data-tab="contact" role="tab" aria-selected="false">Contact</button>
     </div>
@@ -302,96 +274,96 @@ footer{margin-top:14px;color:var(--muted2);font-size:12px;display:flex;justify-c
   <div class="content" aria-live="polite">
     <div class="content-inner">
 
-      <!-- ================================
-           SUMMARY TAB
-           ================================ -->
+      <!-- Summary -->
       <div class="tab-pane active" id="summary" role="tabpanel">
         <div class="section-title">
           <h2>Summary</h2>
-          <span>Senior finance leader | FTSE 100 & PE-backed environments</span>
+          <span>FTSE 100 and PE-backed environments</span>
         </div>
 
         <div class="hero">
           <div class="panel tight">
             <div class="h1">About me</div>
             <p class="p">
-              Finance Director managing $1bn+ P&Ls across FTSE 100 and PE-backed environments. Delivered $300m+ cost reduction over three years through ZBB, operating model redesign and strengthened governance across technology and property cost bases. Senior business partner to CFOs, CIOs, CTOs and ExCo in complex matrix organisations, owning resource allocation, performance discipline and investment decisions across multi-billion capex portfolios. Modernised reporting and planning through automation and AI, building and leading teams to deliver sustained BAU performance alongside transformation.
+              Finance Director with 15+ years in FTSE 100 and PE-backed businesses, typically hired into newly created roles to build finance and governance functions from scratch or fix broken ones. Done this twice at scale at WPP in parallel, directly accountable for a $1.3bn global technology cost base and an $800m global property estate, delivering $300m+ of sustained run-rate savings, securing $250m of Board-approved AI and SaaS investment, and governing a $400m change portfolio alongside. Trusted partner to CFOs, CIOs, CTOs and Group CEOs, leading teams of 20+.
             </p>
 
             <div class="contactbar" aria-label="Contact me">
-              <span class="chip"><b>Location:</b> London (hybrid)</span>
+              <span class="chip"><b>Location:</b> London</span>
               <span class="chip"><b>📱</b> 07777 103 152</span>
               <a class="chip" href="mailto:chris_p_smith@outlook.com"><b>Email me</b></a>
             </div>
           </div>
 
-          <!-- KPI Panel - the big numbers -->
           <div class="panel">
             <div class="kpi-grid">
               <div class="kpi">
-                <div class="kpi-title">📊 Cost reduction</div>
+                <div class="kpi-title">Sustained run-rate savings</div>
                 <div class="kpi-value">$300m+</div>
-                <div class="kpi-note">Over 3 years via ZBB, transformation and operating model redesign</div>
+                <div class="kpi-note">Over 3 years across technology and property cost bases via ZBB and operating model redesign</div>
               </div>
 
               <div class="kpi">
-                <div class="kpi-title">💰 P&L managed</div>
-                <div class="kpi-value">$1bn+</div>
-                <div class="kpi-note">FP&A, governance and performance discipline across corporate cost bases</div>
+                <div class="kpi-title">Technology cost base owned</div>
+                <div class="kpi-value">$1.3bn</div>
+                <div class="kpi-note">PLC Board-approved centralisation under CIO ownership across 700 operating entities</div>
               </div>
 
               <div class="kpi">
-                <div class="kpi-title">🏗️ Capex oversight</div>
+                <div class="kpi-title">Change portfolio governed</div>
                 <div class="kpi-value">$400m+</div>
-                <div class="kpi-note">Technology change portfolio + $250m property capex annual governance</div>
+                <div class="kpi-note">ERP transformation, data centre migration, application rationalisation, op model redesign</div>
               </div>
 
               <div class="kpi">
-                <div class="kpi-title">📈 Revenue leadership</div>
-                <div class="kpi-value">$100m+</div>
-                <div class="kpi-note">European FD role managing margin, utilisation and delivery decisions</div>
+                <div class="kpi-title">AI &amp; SaaS investment secured</div>
+                <div class="kpi-value">$250m</div>
+                <div class="kpi-note">CEO and Board-approved growth case built on CAC, LTV, gross margin and payback</div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Key capabilities grid -->
         <div class="grid">
           <div class="card third" data-expand>
-            <h3>🤝 Business partnering</h3>
-            <p>Executive decision support across performance, resourcing and investment</p>
-            <div class="more">Partner to CFO, CIO, CTO, CREO and ExCo. I focus on clear definitions, owned actions and cadence that drives accountability.</div>
+            <h3>Executive partnering</h3>
+            <p>CFO, CIO, CTO and Group CEO decision support in complex matrix orgs</p>
+            <div class="more">Authored Group CEO three-year plans, presented to PLC Board and ExCo, secured Board approval for $250m+ of growth investment.</div>
           </div>
 
           <div class="card third" data-expand>
-            <h3>💻 Technology finance</h3>
+            <h3>Technology finance</h3>
             <p>Spend transparency, portfolio governance, vendor economics</p>
-            <div class="more">Standardised $1.3bn of technology spend across 700 agencies. Built ZBB capability with embedded benefits tracking.</div>
+            <div class="more">Standardised $1.3bn of technology spend across 700 agencies. Designed run vs change reporting and led $450m+ of vendor commercial negotiations.</div>
           </div>
 
           <div class="card third" data-expand>
-            <h3>🏢 Property finance</h3>
-            <p>Estate cost modelling, commitments, capability build</p>
-            <div class="more">Rebuilt $800m+ global property cost base with consolidated visibility of leases and long-term commitments.</div>
+            <h3>Property finance</h3>
+            <p>Estate cost modelling, lease commitments, capability build</p>
+            <div class="more">Rebuilt fragmented $800m global property cost base into a single finance and governance model. Stood up a new property finance team from concept through to BAU.</div>
           </div>
 
           <div class="card third" data-expand>
-            <h3>💡 Commercial finance</h3>
-            <p>GTM support, pricing, unit economics, investment cases</p>
-            <div class="more">Secured Board approval for $250m+ AI product growth case. Built pricing and unit economics models linking CAC, LTV, and payback.</div>
+            <h3>Value creation &amp; ZBB</h3>
+            <p>Programme design, benefits taxonomy, run-rate sustainment</p>
+            <div class="more">Architected WPP's first global ZBB programme, $110m of in-year savings. Built Value Realisation team running weekly tracking and SteerCo cadence.</div>
           </div>
 
-          <div class="card full" data-expand>
-            <h3>⚙️ Automation & AI</h3>
-            <p>Python automation and AI-assisted workflows that improve pace, consistency and control</p>
-            <div class="more">Automated month-end reporting cycles, reducing close time from 8 to 5 days. Built AI agents for summarising and drafting decision materials.</div>
+          <div class="card third" data-expand>
+            <h3>Capital allocation</h3>
+            <p>Business cases, IRR/NPV, M&amp;A buy-side, investment governance</p>
+            <div class="more">Led BT buy-side M&amp;A on transactions up to £20m. Governed $250m of annual property capex and a c.$500m capex portfolio at Inmarsat.</div>
+          </div>
+
+          <div class="card third" data-expand>
+            <h3>Commercial &amp; pricing</h3>
+            <p>Unit economics, AI and SaaS pricing, GTM business cases</p>
+            <div class="more">Built CAC, LTV, gross margin and payback case behind WPP's $250m AI growth investment. Designed BT's £1.6bn product profitability methodology.</div>
           </div>
         </div>
       </div>
 
-      <!-- ================================
-           EXPERIENCE TAB
-           ================================ -->
+      <!-- Experience -->
       <div class="tab-pane" id="experience" role="tabpanel">
         <div class="section-title">
           <h2>Experience</h2>
@@ -404,247 +376,259 @@ footer{margin-top:14px;color:var(--muted2);font-size:12px;display:flex;justify-c
               <div class="t-role">APCO Worldwide <span class="t-sub">Finance Director, Europe</span></div>
               <div class="t-dates">Sep 2025 – Present</div>
             </div>
-            <div class="t-meta"><b>London, UK</b> <span class="dot">•</span> <span class="muted">Largest independently owned PR agency</span></div>
+            <div class="t-meta"><b>London, UK</b> <span class="dot">•</span> <span class="muted">Largest independently owned global public affairs consultancy</span></div>
             <div class="t-scope">
-              Lead financial planning and performance for seven European markets ($100m+ revenue), reporting to Group CFO and partnering regional MDs on growth, margin and resource allocation.
+              Appointed to lead finance transformation and performance across seven European markets ($100m+ revenue), reporting jointly to the Group CFO and COO, partnering regional MDs on growth, margin and capacity decisions.
             </div>
             <ul>
-              <li>Built the first consolidated Europe-wide view of utilisation, fee recovery and delivery economics</li>
-              <li>Identified 100+ clients with material margin leakage, protecting capacity for higher-margin work</li>
-              <li>Designed bottom-up cost framework for Budget 2026, modelling scenarios worth c.2pp EBITDA improvement</li>
-              <li>Modernised month-end reporting by automating Adaptive Insights refresh using Python and Power Automate</li>
+              <li>Built the first consolidated Europe-wide view of utilisation, fee recovery and delivery economics, identifying 100+ clients with material margin leakage and reshaping pricing, capacity and client portfolio decisions</li>
+              <li>Reset the 2026 planning approach from top-down target setting to bottom-up cost and capacity modelling, surfacing c.2pp of EBITDA improvement and embedding the output into the monthly performance cadence</li>
+              <li>Modernised month-end close using Python and Power Automate to automate Adaptive Insights refresh and pack build, cutting manual effort and removing version-control risk</li>
             </ul>
           </div>
 
           <div class="t-item">
             <div class="t-top">
-              <div class="t-role">WPP <span class="t-sub">Finance Director, Strategy & Transformation</span></div>
+              <div class="t-role">WPP <span class="t-sub">Finance Director, Group Strategy and Transformation</span></div>
               <div class="t-dates">Aug 2024 – Aug 2025</div>
             </div>
-            <div class="t-meta"><b>London, UK</b> <span class="dot">•</span> <span class="muted">Global advertising and marketing services</span></div>
+            <div class="t-meta"><b>London, UK</b> <span class="dot">•</span> <span class="muted">Global advertising, media and technology services group, FTSE 100</span></div>
             <div class="t-scope">
-              Reported to Group Deputy CFO as senior partner to CIO, CFO, CTO and CREO, owning performance reporting and governance for $1bn+ corporate cost base.
+              Reported to the Group Deputy CFO as senior finance partner to the CIO, CFO, CTO and CREO, owning planning, performance and governance across a $1bn+ global corporate cost base.
             </div>
             <ul>
-              <li>Authored Group CEO three-year plan to simplify and reduce back-office costs by 30% by 2027</li>
-              <li>Rebuilt global $800m Property finance model and implemented governance over $250m annual property capex</li>
-              <li>Delivered $100m+ in-year savings through ZBB-led transformation with embedded run-rate governance</li>
-              <li>Built pricing and unit economics models for AI and SaaS offerings, securing CEO approval for $250m+ growth investment</li>
+              <li>Authored the Group CEO's three-year plan to simplify back-office operations and cut costs by 30% by 2027, defining the roadmap, governance model and benefits tracking across multiple cost towers</li>
+              <li>Personally led the rebuild of WPP's global $800m Property and Estates finance model, implementing investment governance over $250m of annual capex and standing up a new property finance team from concept through to BAU</li>
+              <li>Built the pricing and unit economics case (CAC, LTV, gross margin, payback) for new AI and SaaS product lines, securing CEO approval for $250m+ of growth investment</li>
+              <li>Delivered $100m+ of in-year savings through ZBB-led transformation across technology and property cost bases, with governance in place to make the savings stick</li>
+              <li>Led supplier negotiations across technology and property vendors totalling $450m+ in contract value</li>
             </ul>
           </div>
 
           <div class="t-item">
             <div class="t-top">
-              <div class="t-role">WPP <span class="t-sub">Head of Finance & Operations, Value Creation</span></div>
+              <div class="t-role">WPP <span class="t-sub">Head of Finance and Operation, Value Creation</span></div>
               <div class="t-dates">Mar 2023 – Aug 2024</div>
             </div>
             <div class="t-meta"><b>London, UK</b></div>
             <div class="t-scope">
-              Architected WPP's first global ZBB capability, delivering $110m in-year savings and establishing technology spend governance.
+              Architected and executed WPP's first global ZBB programme, delivering $110m of in-year savings through pan-group optimisation and sharper financial discipline.
             </div>
             <ul>
-              <li>Governed $400m+ enterprise change portfolio spanning ERP transformation and data centre migration</li>
-              <li>Secured PLC Board approval to centralise $1.3bn technology spend under CIO mandate</li>
-              <li>Rebuilt technology chart of accounts to create decision-grade view of run vs change spend</li>
-              <li>Built global Value Creation and Realisation teams with weekly benefits tracking cadence</li>
+              <li>Built and led WPP's Value Creation and Value Realisation teams (~20 FTE), running weekly benefits tracking and SteerCo cadence to convert savings plans into delivered run-rate reductions</li>
+              <li>Secured PLC Board approval to centralise $1.3bn of technology spend under CIO ownership, resetting decision rights, approval thresholds and accountability across 700 operating entities</li>
+              <li>Rebuilt the technology chart of accounts, recharge and allocation logic to produce a decision-grade view of run vs change spend</li>
+              <li>Governed a $400m+ enterprise change portfolio spanning ERP transformation, data centre migration, application rationalisation and operating model redesign</li>
             </ul>
           </div>
 
           <div class="t-item">
             <div class="t-top">
-              <div class="t-role">WPP <span class="t-sub">Head of Finance, Technology Business Partnering</span></div>
+              <div class="t-role">WPP <span class="t-sub">Head of Finance, Technology Business Partner</span></div>
               <div class="t-dates">May 2022 – Mar 2023</div>
             </div>
             <div class="t-meta"><b>London, UK</b></div>
             <div class="t-scope">
-              Reported to Technology CFO, partnering CIO and CTO on investment decisions and performance management for $500m technology spend P&L.
+              Reported to the Technology CFO, partnering the CIO and CTO on investment decisions, cost control and performance across a $500m technology P&amp;L.
             </div>
             <ul>
-              <li>Built business partnering function from ground up, shifting from backward to forward-looking decision support</li>
-              <li>Provided financial authority on commercial deals including IRR/NPV analysis and scenario modelling</li>
+              <li>Built the business partnering function from the ground up, shifting finance from backward-looking reporting to forward-looking decision support and scenario modelling</li>
+              <li>Provided financial authority on commercial deals and investment decisions, including business cases, IRR and NPV analysis, scenario modelling and post-approval tracking</li>
+              <li>Led finance workstreams for M&amp;A integration, covering due diligence, synergy validation and integration cost governance</li>
             </ul>
           </div>
 
           <div class="t-item">
             <div class="t-top">
-              <div class="t-role">BT Group <span class="t-sub">Senior Finance Business Partner</span></div>
+              <div class="t-role">BT Group <span class="t-sub">Senior Finance Business Partner, M&amp;A, Data &amp; AI</span></div>
               <div class="t-dates">Apr 2021 – May 2022</div>
             </div>
-            <div class="t-meta"><b>London, UK</b> <span class="dot">•</span> <span class="muted">M&A, Data & AI division</span></div>
+            <div class="t-meta"><b>London, UK</b> <span class="dot">•</span> <span class="muted">FTSE 100 telecommunications</span></div>
             <div class="t-scope">
-              Led team of Business Partners supporting MD of Data & AI and MD of M&A, owning finance workstreams for buy-side investments.
+              Led a team of business partners supporting the MD of M&amp;A and the MD of Data &amp; AI across investment decisions, growth strategy and executive decision-making for emerging technology businesses.
             </div>
             <ul>
-              <li>Owned valuation modelling for investment decisions, from deal identification to funds release</li>
-              <li>Produced market sizing and unit economics analysis for new product launches</li>
+              <li>Built the investment case underpinning BT's Data &amp; AI division, supporting a c.£500m growth agenda through business case development, scenario modelling and strategic financial analysis</li>
+              <li>Led finance on buy-side M&amp;A transactions up to £20m, covering valuation modelling, diligence coordination and approvals from target assessment through to funds release</li>
+              <li>Supported evaluation of early-stage and distressed asset opportunities</li>
             </ul>
           </div>
 
           <div class="t-item">
             <div class="t-top">
-              <div class="t-role">BT Group <span class="t-sub">Senior Finance Manager, Insights & Economics</span></div>
+              <div class="t-role">BT Group <span class="t-sub">Senior Finance Manager, Insight &amp; Economics</span></div>
               <div class="t-dates">Jan 2019 – Apr 2021</div>
             </div>
             <div class="t-meta"><b>London, UK</b></div>
             <div class="t-scope">
-              Designed holistic product profitability methodology covering ~£1.6bn of P&L, adopted into FY2021 management reporting.
+              Designed the product profitability and overhead allocation methodology across ~£1.6bn of P&amp;L, adopted into management reporting and requiring restated segment comparatives under IFRS 8.
             </div>
             <ul>
-              <li>Partnered CTO and CDIO using consumption metrics and driver-based analysis to optimise resource allocation</li>
-              <li>Required restated segment comparatives under IFRS 8 due to methodology changes</li>
+              <li>Partnered with the CTO and CDIO on technology cost economics, using consumption metrics and driver-based analysis to optimise resource allocation</li>
             </ul>
           </div>
 
           <div class="t-item">
             <div class="t-top">
-              <div class="t-role">Inmarsat <span class="t-sub">Progressive finance roles</span></div>
+              <div class="t-role">BT Group <span class="t-sub">Finance Manager, Strategy &amp; Transformation</span></div>
+              <div class="t-dates">Apr 2018 – Jan 2019</div>
+            </div>
+            <div class="t-meta"><b>London, UK</b></div>
+            <div class="t-scope">
+              Built commercial models for BT's IT microservices offering and partnered with vendor management to optimise outsourced resource spend, delivering £50m of savings over three years.
+            </div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-top">
+              <div class="t-role">Inmarsat (now Viasat) <span class="t-sub">Finance Manager to CTO; earlier roles including Capex Finance Controller</span></div>
               <div class="t-dates">Aug 2011 – Apr 2018</div>
             </div>
-            <div class="t-meta"><b>London, UK</b> <span class="dot">•</span> <span class="muted">Now Viasat (PE-backed, acquired)</span></div>
+            <div class="t-meta"><b>London, UK</b> <span class="dot">•</span> <span class="muted">PE-backed, subsequently acquired by Viasat</span></div>
             <div class="t-scope">
-              Progressed through Financial Accountant, Capex Finance Controller, and Finance Manager to CTO roles.
+              Governed a c.$500m capital expenditure portfolio across satellite and technology programmes, supporting investment prioritisation, approval and performance tracking at Board level.
             </div>
             <ul>
-              <li>Built commercial and capacity planning models for multi-billion-dollar GEO satellite investments</li>
-              <li>Produced board-ready investment cases linking technical options to returns, cash and risk</li>
+              <li>Built 30-year cashflow and capacity models for major GEO satellite investments, translating technical assumptions into long-term return, liquidity and funding scenarios</li>
+              <li>Produced board-ready investment cases under PE ownership, connecting technical options, risk, cashflow and returns to support executive decision-making</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <!-- ================================
-           SKILLS TAB
-           ================================ -->
+      <!-- Skills -->
       <div class="tab-pane" id="skills" role="tabpanel">
         <div class="section-title">
-          <h2>Skills & Tools</h2>
-          <span>What I bring to the table</span>
+          <h2>Skills &amp; Tools</h2>
+          <span>What I bring</span>
         </div>
 
         <div class="grid">
           <div class="card" data-expand>
-            <h3>📊 FP&A Leadership</h3>
-            <p>Budget, forecast, LRP, scenarios, performance packs and cadence</p>
-            <div class="more">Driver-based modelling and clear definitions to improve decision quality. Experience with Adaptive Insights, Maconomy and SAP S/4HANA.</div>
+            <h3>Transformation &amp; Value Creation</h3>
+            <p>ZBB design and rollout, operating model redesign, benefits realisation</p>
+            <div class="more">Architected WPP's first global ZBB programme. $110m of in-year savings and $300m+ of sustained run-rate reduction over three years. Governance built so savings stick.</div>
           </div>
 
           <div class="card" data-expand>
-            <h3>💼 Value Creation & ZBB</h3>
-            <p>Benefits taxonomy, validation, sustainment and reporting</p>
-            <div class="more">Delivered $110m in-year savings with governance that keeps savings measurable, owned and repeatable. Built Value Realisation teams and SteerCo routines.</div>
+            <h3>FP&amp;A &amp; Performance Management</h3>
+            <p>Budget, forecast, LRP, scenarios, executive cadence</p>
+            <div class="more">Owned $1bn+ corporate cost bases. Driver-based modelling and clear definitions for decision quality. Adaptive Insights, Maconomy, SAP S/4HANA.</div>
           </div>
 
           <div class="card" data-expand>
-            <h3>🎯 Executive Partnering</h3>
-            <p>CFO, CIO, CTO and ExCo decision support in complex matrix orgs</p>
-            <div class="more">Authored CEO three-year plans, presented to ExCo, secured Board approvals for $250m+ investments. Clear narrative and decision-grade materials.</div>
+            <h3>Capital Allocation &amp; M&amp;A</h3>
+            <p>Business cases, IRR/NPV, buy-side diligence, integration governance</p>
+            <div class="more">Led BT buy-side M&amp;A on transactions up to £20m and supported a c.£500m growth agenda for the Data &amp; AI division. Governed $250m of annual property capex.</div>
           </div>
 
           <div class="card" data-expand>
-            <h3>💻 Technology Finance</h3>
-            <p>Portfolio governance, vendor economics, spend taxonomy</p>
-            <div class="more">Standardised $1.3bn spend across 700 agencies. Redesigned chart of accounts for run vs change visibility. Led supplier negotiations worth $450m+ TCV.</div>
+            <h3>Technology Finance</h3>
+            <p>Run vs change, portfolio governance, vendor economics</p>
+            <div class="more">Standardised $1.3bn spend across 700 agencies. Redesigned chart of accounts and recharge logic. $450m+ of vendor commercial negotiations.</div>
           </div>
 
           <div class="card" data-expand>
-            <h3>🏢 Property & Estates</h3>
-            <p>Estate cost modelling, lease commitments, governance</p>
-            <div class="more">Rebuilt $800m+ property cost base with consolidated visibility. Governed $250m annual capex. Built and transitioned new Property Finance team from concept to BAU.</div>
+            <h3>Property &amp; Estates</h3>
+            <p>Estate cost modelling, lease commitments, capability build</p>
+            <div class="more">Rebuilt fragmented $800m property cost base into a single finance and governance model. $250m of annual capex brought under formal investment governance. New property finance team from concept to BAU.</div>
           </div>
 
           <div class="card" data-expand>
-            <h3>💡 Commercial Finance</h3>
-            <p>Pricing, unit economics, GTM strategy, product profitability</p>
-            <div class="more">AI/SaaS pricing frameworks. Built models linking CAC, LTV, margin and payback. Created product profitability at BT covering £1.6bn P&L.</div>
+            <h3>Commercial Finance &amp; Pricing</h3>
+            <p>Unit economics, AI and SaaS pricing, GTM business cases</p>
+            <div class="more">CAC, LTV, gross margin and payback case behind a $250m Board-approved AI and SaaS investment at WPP. Product profitability methodology across BT's £1.6bn cost base.</div>
           </div>
 
           <div class="card full" data-expand>
-            <h3>🛠️ Systems & Tools</h3>
+            <h3>Systems &amp; Tools</h3>
             <p>Excel, Power BI, Looker, Adaptive Insights, Maconomy, SAP S/4HANA, Power Automate, Python</p>
-            <div class="more">Strong Excel for financial modelling. Python for automation and AI-assisted workflows. Power BI and Looker for dashboards. Deep Adaptive Insights experience.</div>
+            <div class="more">Strong Excel and Adaptive for modelling and planning. Python and Power Automate for automating month-end close and reporting workflows. Power BI and Looker for performance dashboards.</div>
           </div>
 
           <div class="card full" data-expand>
-            <h3>📐 Operating Model Design</h3>
-            <p>Org design, process redesign, roles and controls</p>
-            <div class="more">Led complex change across finance, technology and corporate functions. Designed intercompany recharge methodology reducing aged balances across 700 entities.</div>
+            <h3>Operating Model Design &amp; Team Build</h3>
+            <p>Org design, process redesign, building functions from blank canvas</p>
+            <div class="more">Built and led teams of 20+ FTE. Stood up Value Creation, Value Realisation and Property Finance teams from concept to BAU. Redesigned global intercompany recharge methodology across 700 operating entities.</div>
           </div>
         </div>
       </div>
 
-      <!-- ================================
-           AUTOMATION TAB
-           The Python code example lives here
-           ================================ -->
+      <!-- Automation -->
       <div class="tab-pane" id="automation" role="tabpanel">
         <div class="section-title">
-          <h2>Automation & AI</h2>
-          <span>Real examples from my workflow</span>
+          <h2>Automation</h2>
+          <span>How I use Python and tooling in the role</span>
         </div>
 
         <div class="grid">
           <div class="card" data-expand>
-            <h3>🤖 Python Automation</h3>
-            <p>Automated month-end reporting, reducing cycle time from 8 to 5 days</p>
-            <div class="more">Built scripts to automate Adaptive Insights refresh and pack build using Python and Power Automate. Removes manual bottlenecks and Excel version-control risk during close.</div>
+            <h3>Adaptive Insights refresh</h3>
+            <p>Python and Power Automate to automate the close cycle</p>
+            <div class="more">At APCO, automated the Adaptive refresh and monthly pack build to remove manual bottlenecks and version-control risk during close. Same approach applied to variance commentary and exceptions reporting.</div>
           </div>
 
           <div class="card" data-expand>
-            <h3>🧠 AI Agents</h3>
-            <p>AI-assisted workflows for summarising and drafting decision materials</p>
-            <div class="more">Use AI to summarise variance commentary, structure ExCo papers, and draft initial investment case narratives from finance inputs. Speeds up insight generation and improves narrative quality.</div>
+            <h3>AI investment economics</h3>
+            <p>Pricing and unit economics for new AI and SaaS product lines</p>
+            <div class="more">Built the CAC, LTV, gross margin and payback model behind WPP's $250m Board-approved AI and SaaS growth investment. Linked product economics to commercial structure and GTM strategy.</div>
           </div>
 
           <div class="card full" data-expand>
-            <h3>💰 Commercial Models for AI Products</h3>
-            <p>Built pricing and GTM models for AI/SaaS offerings</p>
-            <div class="more">Created unit economics models linking CAC (Customer Acquisition Cost), LTV (Lifetime Value), gross margin and payback periods. Used to secure CEO approval for $250m+ growth investment.</div>
+            <h3>Driver-based variance reporting</h3>
+            <p>Replacing static commentary with structured variance attribution</p>
+            <div class="more">Variance reporting structured by driver (volume, rate, mix, FX, timing) so reviewers see what moved and why, not just the number. Used at APCO to surface margin leakage across 100+ clients.</div>
           </div>
         </div>
 
-        <!-- Note: This is actual code I use for month-end automation
-             It reads Adaptive Insights exports, validates them, and builds the monthly pack
-             Saved about 6 hours per month-end cycle -->
-        
         <div class="callout">
-          <div class="h">Example: Month end pack helper</div>
+          <div class="h">Worked example: variance attribution helper</div>
           <div class="t">
-            Small snippet from my workflow, shown at a readable size. It rolls actuals versus budget into a simple variance view.
+            Stripped-down version of the kind of script I keep around for month-end. Reads actuals and budget, joins on cost centre and account, flags material variances and ranks the top drivers.
           </div>
           <details style="margin-top:12px">
             <summary style="cursor:pointer">Show the snippet</summary>
 <pre><code>import pandas as pd
 
-df = pd.read_csv("actuals.csv")
-bud = pd.read_csv("budget.csv")
+MATERIALITY = 50_000
 
-m = df.merge(bud, on=["cost_center","account"], suffixes=("_act","_bud"))
-m["variance"] = m["amount_act"] - m["amount_bud"]
+actuals = pd.read_csv("actuals.csv")
+budget  = pd.read_csv("budget.csv")
 
-print(
-  m.groupby("cost_center")["variance"]
-   .sum()
-   .sort_values(ascending=False)
-   .head(10)
-)</code></pre>
+df = actuals.merge(
+    budget,
+    on=["cost_centre", "account"],
+    suffixes=("_act", "_bud"),
+    how="outer",
+).fillna(0)
+
+df["variance"]    = df["amount_act"] - df["amount_bud"]
+df["variance_pc"] = df["variance"] / df["amount_bud"].replace(0, pd.NA)
+df["material"]    = df["variance"].abs() &gt;= MATERIALITY
+
+top = (
+    df[df["material"]]
+      .sort_values("variance", key=abs, ascending=False)
+      .head(15)
+)
+
+print(top[["cost_centre", "account", "amount_bud", "amount_act", "variance", "variance_pc"]])
+</code></pre>
           </details>
         </div>
       </div>
 
-      <!-- ================================
-           CONTACT TAB
-           ================================ -->
+      <!-- Contact -->
       <div class="tab-pane" id="contact" role="tabpanel">
         <div class="section-title">
           <h2>Get in touch</h2>
-          <span>Happy to discuss opportunities</span>
+          <span>London-based</span>
         </div>
 
         <div class="panel">
           <div class="h1">Contact details</div>
           <p class="p">
-            I'm currently Finance Director at APCO Worldwide (Europe) but always happy to hear about interesting opportunities,
-            particularly roles involving transformation, FP&A leadership, or senior business partnering in technology or property-intensive organisations.
+            Currently Finance Director, Europe at APCO Worldwide. Open to senior finance roles in FTSE 100 and PE-backed technology and B2B businesses, particularly where the brief is to build or rebuild a finance and governance function alongside a real transformation agenda. London or Cambridge.
           </p>
 
           <div class="btns">
@@ -655,10 +639,10 @@ print(
               ✉️ chris_p_smith@outlook.com
             </a>
             <a href="https://www.linkedin.com/in/chrispaulsmith" target="_blank" rel="noreferrer" class="btn">
-              🔗 LinkedIn: chrispaulsmith
+              🔗 LinkedIn
             </a>
-            <a href="https://github.com/chrissmith-ship-it" target="_blank" rel="noreferrer" class="btn">
-              💻 GitHub Portfolio
+            <a href="https://chrissmith-ship-it.github.io/chris-smith-portfolio/" target="_blank" rel="noreferrer" class="btn">
+              💻 GitHub portfolio
             </a>
           </div>
         </div>
@@ -668,29 +652,21 @@ print(
   </div>
 
   <footer>
-    <span>Last updated: February 2026</span>
-</footer>
+    <span>Last updated: April 2026</span>
+  </footer>
 </div>
 
-<!-- ================================
-     JAVASCRIPT: Tab switching logic
-     Kept vanilla JS - no need for React/Vue for this
-     ================================ -->
 <script>
 document.querySelectorAll('.tab').forEach(tab => {
   tab.addEventListener('click', () => {
-    // Remove active from all tabs and panes
     document.querySelectorAll('.tab').forEach(t => {
       t.classList.remove('active');
       t.setAttribute('aria-selected', 'false');
     });
     document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
-
-    // Add active to clicked tab and corresponding pane
     tab.classList.add('active');
     tab.setAttribute('aria-selected', 'true');
-    const targetId = tab.getAttribute('data-tab');
-    document.getElementById(targetId).classList.add('active');
+    document.getElementById(tab.getAttribute('data-tab')).classList.add('active');
   });
 });
 </script>
